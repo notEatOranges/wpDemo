@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="demo"></div>
+    <div id="demo">这是个demo</div>
   </div>
 </template>
 
