@@ -10,6 +10,11 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/demo2',
+      name: 'demo2',
+      component: () => import(/* webpackChunkName: "demo2" */ '@/components/demo2')
     }
   ]
 })
