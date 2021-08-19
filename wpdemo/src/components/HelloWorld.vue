@@ -22,6 +22,7 @@ export default {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  perspective: 1000;
 }
 #demo {
   width: 800px;
@@ -46,6 +47,7 @@ export default {
   background-repeat: no-repeat;
   background-size: 250px 250px;
   position: relative;
+  animation: rotate 5s ease-in-out infinite;
 }
 #demo::before {
   content: "";
@@ -108,5 +110,14 @@ export default {
 }
 #demo::after {
   clip-path: polygon(68% 28%, 72% 28%, 72% 67%, 50% 67%, 50% 57%, 68% 57%);
+}
+@keyframes rotate {
+  0%,
+  100% {
+    transform: rotateY(30deg);
+  }
+  50% {
+    transform: rotateY(-30deg);
+  }
 }
 </style>
