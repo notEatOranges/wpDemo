@@ -112,12 +112,14 @@ export default {
   clip-path: polygon(68% 28%, 72% 28%, 72% 67%, 50% 67%, 50% 57%, 68% 57%);
 }
 @keyframes rotate {
-  0%,
-  100% {
+  0% {
     transform: rotateY(30deg);
   }
   50% {
     transform: rotateY(-30deg);
+  }
+  100% {
+    transform: rotateY(30deg);
   }
 }
 </style>

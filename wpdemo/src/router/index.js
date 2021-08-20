@@ -15,6 +15,11 @@ export default new Router({
       path: '/demo2',
       name: 'demo2',
       component: () => import(/* webpackChunkName: "demo2" */ '@/components/demo2')
+    },
+    {
+      path: '/demo3',
+      name: 'demo3',
+      component: () => import(/* webpackChunkName: "demo2" */ '@/components/demo3')
     }
   ]
 })
