@@ -10,13 +10,21 @@
     </div>
     <div class="div_demo"
          ref="div_demo"
-         :style="{height:conheight2+'px'}">{{conheight2}}</div>
+         :style="{height:conheight2+'px'}">{{conheight2}}
+      <div>
+        {{this.$store.state.demo2}}
+      </div>
+      <div>
+        <el-button type="primary" @click="handle">你过来啊</el-button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 // eslint-disable-next-line no-unused-vars
 import elementResizeDetectorMaker from 'element-resize-detector'
+// import {mapState, mapActions, mapGetters} from 'vuex'
 export default {
   name: 'demo2',
   data () {
@@ -93,6 +101,9 @@ export default {
   },
 
   methods: {
+    handle () {
+      this.$store.commit('demo2/add')
+    },
     //  计算高度
     getTreeHeight (dom) {
       return dom.offsetHeight
@@ -190,7 +201,9 @@ export default {
 
   },
   computed: {
-
+    // ...mapState({
+    //
+    // })
   }
 }
 </script>
